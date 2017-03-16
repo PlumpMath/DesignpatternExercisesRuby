@@ -7,22 +7,22 @@ class ExtractingTool
   attr_accessor :extraction
 
   def setExtraction extraction
-    @extraction = _______________________
+    @extraction = extraction
   end
 
   def startExtraction
-    _______________________.callCorrectExtraction
+    extraction.callCorrectExtraction
   end
 end
 
 extractingTool = ExtractingTool.new
-extractingTool.setExtraction(_______________________)
+extractingTool.setExtraction(CSVExtraction.new("a.csv"))
 extractingTool.startExtraction
 
-extractingTool.setExtraction(_______________________)
+extractingTool.setExtraction(TSVExtraction.new("b.tsv"))
 extractingTool.startExtraction()
 
-extractingTool.setExtraction(_______________________)
+extractingTool.setExtraction(DBExtraction.new("c.db"))
 extractingTool.startExtraction()
 
 =begin
